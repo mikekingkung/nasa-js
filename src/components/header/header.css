@@ -1,5 +1,5 @@
 .navbar-brand, .navbar-brand img {
-  width: 80px;
+  width: 90px;
 }
 .navbar-toggler {
     border-color: rgba(217, 214, 218, 1);
@@ -10,18 +10,18 @@ nav div.container-fluid {
 .chevron { 
   list-style: none; 
   overflow: hidden;
-  font: 14px Sans-Serif; 
+  font: 12px Sans-Serif; 
 }
 .chevron li { 
   float: left;
-  margin-right: 30px;
+  margin-right: 100px;
   width: 100px;
 }
 .chevron li a {
-  color: rgba(67, 54, 72, 1) !important;
+  color: rgb(72, 54, 59) !important;
   text-decoration: none; 
-  padding: 10px 0 10px 50px !important;
-  background: rgba(217, 214, 218, 1); 
+  padding: 15px 0 15px 50px !important;
+  background: rgb(218, 214, 215); 
   position: relative; 
   display: block;
   float: left;
@@ -64,10 +64,10 @@ div#search {
   position: relative;
 }
 input[type="search"] {
-  padding-left: 35px;
-  background-color: rgba(217, 214, 218, 1);
+  padding-left: 5px;
+  background-color: rgb(14, 5, 17);
   border-color: rgba(217, 214, 218, 1);
-  border-style: none;
+  border-style: solid;
   width: 80%
 }
 div#search::before { 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import DisplayImages from './DisplayImages';
 import SearchBar from './search/SearchBar';
 import axios from "axios";
+import LoadingContent from  './loading/LoadingContent';
 
 const FilterableImages = ({query}) => {
 
@@ -10,9 +11,7 @@ const FilterableImages = ({query}) => {
     const [searchText, setSearchText] = useState(query);
     const [advanced, setAdvanced] = useState(false);
 
-    //const [courseID, setCourseID] = useState(0)
-
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState(query);
     const [isLoaded, setIsLoaded] = useState(false);
 
 //    const getImages = async query => {
@@ -63,18 +62,20 @@ useEffect(() => {
     //   ];
     
     const handleChange = event => {
-        // event.preventDefault();
+        //event.preventDefault();
 
         console.log("key pressed:" , event.key)
+        console.log(event.target.value);
         if (event.key === 'Enter'){
+            console.log("setting search text");
             setSearchText(event.target.value);
+            setIsLoaded(false);
         }
 
         if (event.target.type === `checkbox`) {
             setAdvanced(event.target.checked);
         }
     }
-
 
     return (
         <div id="table-wrapper">
@@ -83,7 +84,7 @@ useEffect(() => {
                 advanced={advanced}
                 handleChange={handleChange}
             />
-            {Array.isArray(images) && images.length > 0 ?
+            {isLoaded?
                  <DisplayImages
                     images={images}
                     searchText={searchText}
@@ -91,7 +92,9 @@ useEffect(() => {
                     isLoaded={isLoaded}
                 />
                 :
-                <h4>Images are Loading</h4>
+                <div>
+                  <LoadingContent/>
+                </div>
             }
         </div>
     );

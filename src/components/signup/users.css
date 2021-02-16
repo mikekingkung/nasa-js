@@ -1,0 +1,37 @@
+form#signUpForm input, form#signUpForm select, form#logInForm input {
+    /* width: 100%; */
+    background-color: rgba(217, 214, 218, 1);
+    padding-left: 0.5em;
+}
+
+@media only screen and (max-width: 768px) {
+    div#signUpText, div#logInText {
+        display: none;
+    }
+
+    div#signUpContent, div#logInContent {
+        margin: 0% !important;
+    }
+
+    .stacked-control {
+        margin-top: 10px;
+    }
+
+}
+
+form#signUpForm input#btn-sign-up, form#logInForm input#btn-log-in {
+    background-color: rgba(67, 54, 72, 1);
+    color: rgba(255, 112, 0, 1);
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  color:rgba(217, 214, 218, 1);
+  border-color: rgba(105, 94, 109, 1);
+}
+
+.custom-control-input:checked~.custom-control-label.ccc::before {
+  background-color:rgba(67, 54, 72, 1)
+}

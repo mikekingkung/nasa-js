@@ -55,28 +55,14 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded }) => {
 
   
   const classes = useStyles();
-  
-
-
+ 
 console.log("images", images);
 console.log("searchText", searchText);
-
-
-
-// const filterResources = images.filter(resource => {
-//   return (resource.image ? resource.image.title.toLowerCase() : resource.video.title.toLowerCase()).includes(searchText)
-// });
-
-// console.log("filterResources", filterResources);
-
-// images = filterResources ;
-isLoaded  = true;
-
 
   return (
           <div>
             <Grid container xs={12} className="classes.container">
-            {isLoaded ? (
+            {Array.isArray(images) && images.length > 0 ? (
                 images.map(data => (
                   <div>
                     <Grid item xs={12} justify="left" alignItems ="left" style={{ padding: 20 }}>
@@ -92,16 +78,16 @@ isLoaded  = true;
                     <Grid container xs={12} spacing={6} className="classes.container">
                       <Grid item xs={6}  justify="left" alignItems ="left" className="classes.missioncontextcontainer">
                       <Typography component="div">
-                        <Box style={{ border: "1px solid blue", margin: "10px"}} width="100%" textAlign="justify" m={10} color="#ffffff"  fontFamily="Orbitron" fontStyle="sans-serif">
-                       {data.image ? <p className="classes.imageorvideo">{data.image.description} key={data.image.id}</p> :<div/> }
-                       {data.video ? <p className="classes.imageorvideo">{data.video.description} key={data.video.id}</p> : <div/> }
+                        <Box style={{ border: "1px solid blue", margin: "10px"}} width="100%" textAlign="left" m={10} color="#ffffff"  fontFamily="Orbitron" fontStyle="sans-serif">
+                       {data.image ? <p style={{ padding: 20 }}>{data.image.description}</p> :<div/> }
+                       {data.video ? <p style={{ padding: 20 }}>{data.video.description}</p> : <div/> }
                        </Box> 
                        </Typography>                     
                     </Grid>
                     <Grid item xs={6}  justify="center" alignItems ="center" className="classes.missioncontextcontainer">
                         <Box style={{ border: "1px solid blue", margin: "10px"}} width="100%" alignItems="center" textAlign="center" m={10} color="#ffffff"  fontFamily="Orbitron" fontStyle="sans-serif">
-                      {data.image ? <img src={data.image.url} alt="image" width="500" height="500" minwidth="500" key={data.image.id}></img> : <p/> }
-                      {data.video ? <video src={data.video.url} width="500" height="500" minWidth="500" controls autoplay> </video> : <br/> }
+                      {data.image ? <img src={data.image.url} alt="image" width="400" height="400" minwidth="400" key={data.image.id}></img> : <p/> }
+                      {data.video ? <video src={data.video.url} width="400" height="400" minWidth="400" controls autoplay> </video> : <br/> }
                       </Box> 
                     </Grid>
                   </Grid>
@@ -109,7 +95,7 @@ isLoaded  = true;
                 ))
               ): (
                   <Grid container item xs={6} alignItems="center" justify="center">
-                    <h1>Loading ... </h1>
+                    <h1>No Search Results Found </h1>
                   </Grid>
                 )
               };
