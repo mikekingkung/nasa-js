@@ -5,7 +5,7 @@ import FilterableImages from "../../../components/FilterableImages";
 const HomeContent = () => {
     return (
         <>
-         <FilterableImages/>
+         <FilterableImages query='moon'/>
         </>
     );
 

@@ -23,14 +23,16 @@ const AboutContent = () => {
            backgroundColor: "black",
            color: "red",
            padding: "20",
-           minWidth: "200"
+           minwidth: "200"
           }
       }));
 
+      const className = useStyles();
+
     return (
         <div>
-        <Grid container xs={12} className="classes.container">
-          <Grid item xs={12}  justify="left" alignItems ="left" className="classes.missioncontextcontainer">               
+        <Grid container className="classes.container">
+          <Grid item xs={12} className="classes.missioncontextcontainer">               
              <p>This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright</p>
           </Grid>
         </Grid>

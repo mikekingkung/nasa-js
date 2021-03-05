@@ -7,7 +7,7 @@ const NavBarLinks = () => {
     const { signedIn } = useContext(UserContext);
 
     return (
-        <ul className="navbar-nav chevron">
+        <ul className="navbar-nav">
             <li className="nav-item"><NavLink to="/discover" activeClassName="active" className="nav-link">Discover</NavLink></li>            
             <li className="nav-item"><NavLink to="/topics" activeClassName="active" className="nav-link">Topics</NavLink></li>
             <li className="nav-item"><NavLink to="/links" activeClassName="active" className="nav-link">Links</NavLink></li>

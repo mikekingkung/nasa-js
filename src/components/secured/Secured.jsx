@@ -23,7 +23,7 @@ const Secured = () => {
       return <div className="secured container"><p><SecuredContent/></p></div>;
     else return <div className="public container"><p>Unable to authenticate</p></div>;
   } else {
-    return <div className="loader"></div>;
+    return <div className="public container"><p>Unable to authenticate - keycloak not running</p></div>;
   }
 };
 

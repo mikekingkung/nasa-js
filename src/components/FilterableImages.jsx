@@ -3,6 +3,9 @@ import DisplayImages from './DisplayImages';
 import SearchBar from './search/SearchBar';
 import axios from "axios";
 import LoadingContent from  './loading/LoadingContent';
+import { data } from 'jquery';
+import { PATH, USERS_CONTEXT } from '../constants/constants.json';
+import { CompareArrowsOutlined } from '@material-ui/icons';
 
 const FilterableImages = ({query}) => {
 
@@ -13,6 +16,8 @@ const FilterableImages = ({query}) => {
 
     const [images, setImages] = useState(query);
     const [isLoaded, setIsLoaded] = useState(false);
+    const [userLinks, setUserLinks] = useState({});
+    const [isSaved, setIsSaved] = useState(false);
 
 //    const getImages = async query => {
 //     const {data} = await axios.get(`${imagesUrl}${query}`,
@@ -45,10 +50,43 @@ useEffect(() => {
   })
       .then(response => {
           const { data } = response;
+
+        //   data.map(item => {
+        //     item.button = false;
+        //   });
+          
           setImages(data);
           setIsLoaded(true);
       }).catch(err => console.error(err));
 }, [searchText]); 
+
+
+useEffect(() => {
+    console.log("saving user links", userLinks);
+    const name = userLinks.userName;
+    const title = userLinks.title;
+    const url = userLinks.url;
+    axios.post(`${PATH}${USERS_CONTEXT}/saveuserlinks`, {
+        userName,
+        url,
+        title
+    },
+    {
+    headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": "*"
+      }}).then(response => {
+            console.log("saved userlinks", response)
+  
+          //   data.map(item => {
+          //     item.button = false;
+          //   });
+            
+            //setUserLinks(userLinks);
+            setIsSaved(true);
+        }).catch(err => console.error(err));
+  }, [userLinks]); 
+
 
     // const data = [
     //     {
@@ -70,13 +108,33 @@ useEffect(() => {
             console.log("setting search text");
             setSearchText(event.target.value);
             setIsLoaded(false);
-        }
-
-        if (event.target.type === `checkbox`) {
-            setAdvanced(event.target.checked);
+            setUserLinks({});
         }
     }
 
+    const userName = 'Guest';
+
+    // try updating user links and passing in here
+    const handleButtonPress = (event, data, markedIndex) => {
+
+        console.log("marked button selected");
+        //console.log("data", data[markedIndex]);
+        //console.log("userName", userName);
+        //console.log("url", data[markedIndex].image ? data[markedIndex].image.url : data[markedIndex].video.url);
+        //console.log("title", data[markedIndex].image ? data[markedIndex].image.title : data[markedIndex].video.title);
+        
+
+    const links = {'userName': {userName},
+                        'url':  data[markedIndex].image ? data[markedIndex].image.url : data[markedIndex].video.url,
+                        'title':  data[markedIndex].image ? data[markedIndex].image.title : data[markedIndex].video.title
+                   }
+
+        console.log("setting user links");
+        setUserLinks(links);
+        data[markedIndex].button=true
+        console.log("set userLinks", userLinks);
+    };
+    
     return (
         <div id="table-wrapper">
             <SearchBar
@@ -90,6 +148,7 @@ useEffect(() => {
                     searchText={searchText}
                     advanced={advanced}
                     isLoaded={isLoaded}
+                    handleButtonPress={handleButtonPress}
                 />
                 :
                 <div>

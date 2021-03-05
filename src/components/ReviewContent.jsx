@@ -106,7 +106,7 @@ const ReviewContent = () => {
             [classes.expandOpen]: expanded,
           })}
           onClick={handleExpandClick}
-          color="colorPrimary"
+          primary="colorPrimary"
           aria-expanded={expanded}
           aria-label="show more"
         >

@@ -13,13 +13,13 @@ const SignUpContent = () => {
 
     const { push } = useHistory();
 
-    const [username, setUsername] = useState("");
+    const [userName, setUserName] = useState("Guest");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [title, setTitle] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
+    const [emailAddress, setEmailAddress] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [dob, setDob] = useState("");
     const [gender, setGender] = useState("");
@@ -47,12 +47,12 @@ const SignUpContent = () => {
         //     .catch(err => console.error(err));
         try {
             const response = await axios.post(`${PATH}${USERS_CONTEXT}/register`, {
-                username,
+                userName,
                 password,
                 title,
                 firstName,
                 lastName,
-                email,
+                emailAddress,
                 phoneNumber,
                 dob,
                 gender
@@ -66,6 +66,8 @@ const SignUpContent = () => {
         }
     }
 
+    //<input className="form-control" placeholder="Username" id="userName" value={userName} onInput={e => setUserName(e.target.value)} />
+
     return (
         <div className="row m-5" id="signUpContent">
             <div className="col" id="signUpText">
@@ -78,7 +80,7 @@ const SignUpContent = () => {
                     <div className="form-group form-row">
                         <label htmlFor="username" className="col-md-2 col-form-label">Username</label>
                         <div className="col-md-10">
-                            <input className="form-control" placeholder="Username" id="username" value={username} onInput={e => setUsername(e.target.value)} />
+                            <input className="form-control" placeholder="Username" id="userName" value={userName} />
                         </div>
                     </div>
                     <div className="form-group form-row">
@@ -120,9 +122,9 @@ const SignUpContent = () => {
                         </div>
                     </div>
                     <div className="form-group form-row">
-                        <label htmlFor="email" className="col-md-2 col-form-label">Email</label>
+                        <label htmlFor="emailAddress" className="col-md-2 col-form-label">Email</label>
                         <div className="col-md-10">
-                            <input className="form-control" type="email" placeholder="yourname@yourdomain.com" id="email" value={email} onInput={e => setEmail(e.target.value)} required/>
+                            <input className="form-control" type="email" placeholder="yourname@yourdomain.com" id="emailAddress" value={emailAddress} onInput={e => setEmailAddress(e.target.value)} required/>
                         </div>
                     </div>
                     <div className="form-group form-row">

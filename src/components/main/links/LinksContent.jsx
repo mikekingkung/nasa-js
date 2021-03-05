@@ -21,21 +21,21 @@ const LinksContent = () => {
           backgroundColor: "black",
           color: "red",
           padding: "20",
-          minWidth: "200"
+          minwidth: "200"
         },
     }));
      
     const classes = useStyles();
     return (
       <div>
-        <Grid container xs={12} >
-          <Grid item xs={12}  justify="left" alignItems ="left" className="classes.missioncontextcontainer">               
+        <Grid container >
+          <Grid item xs={12} className="classes.missioncontextcontainer">               
               <h2>Topics</h2>
           </Grid>
-          <Grid item xs={12}  justify="left" alignItems ="left" className="classes.missioncontextcontainer">
+          <Grid item xs={12}  className="classes.missioncontextcontainer">
               <a href = "https://www.nasa.gov/topics/humans-in-space" target="_blank" rel="noreferrer">Humans in space</a>
           </Grid>
-          <Grid item xs={12}  justify="left" alignItems ="left">
+          <Grid item xs={12} >
               <ReviewContent/>
           </Grid>
 

@@ -14,6 +14,8 @@ import React, { useState, useEffect } from 'react';
 //import DetailsContent from './movieDetails/DetailsContent';
 //import PrivateRoute from '../auth/PrivateRoute';
 
+import { QUERY } from '../../constants/constants.json';
+
 //import ProfilePage from './profile/ProfilePage';
 
 const Main = () => {

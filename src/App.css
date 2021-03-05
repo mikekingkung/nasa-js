@@ -2,19 +2,18 @@
   box-sizing: border-box;
   margin: 10 px;
   padding: 10 px;
-  background: rgb(0, 0, 0);
-  color: rgb(156, 20, 43);  
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  background: rgb(0, 0, 0);
 }
 
 .container {
   margin: 10px auto;
-  background: rgb(0, 0 ,0);
-  color: rgb(156, 20, 43);
+  background: rgb(0, 0, 0);
+  color: rgb(233, 10, 10);
 }
 
 input[type="text"] {
@@ -26,8 +25,8 @@ input[type="text"] {
 
 input[type="submit"] {
   width: 100%;
-  background: rgb(165, 209, 82);
-  color: rgb(156, 20, 43);
+  background: rgb(247, 244, 244);
+  color: rgb(7, 7, 7);
   padding: 5px;
   font-size: 1.1rem;
   cursor: pointer;
