@@ -6,8 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div>
-        <p>
-           Welcome 
+        <p
+          data-testid="welcome"
+        >
+          Welcome to the Learn Space application. The application makes use fof the Nasa Video and Image API. The application allows keyword searches. Results are limited ae 10 currently per search. It is also possible to save links and review them on the user details page.
         </p>
         <img
           alt="Learn Space Ltd"
@@ -19,8 +21,10 @@ Object {
   </body>,
   "container": <div>
     <div>
-      <p>
-         Welcome 
+      <p
+        data-testid="welcome"
+      >
+        Welcome to the Learn Space application. The application makes use fof the Nasa Video and Image API. The application allows keyword searches. Results are limited ae 10 currently per search. It is also possible to save links and review them on the user details page.
       </p>
       <img
         alt="Learn Space Ltd"

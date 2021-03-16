@@ -28,18 +28,27 @@ const LinksContent = () => {
     const classes = useStyles();
     return (
       <div>
-        <Grid container >
+        <Grid container spacing={3}>
           <Grid item xs={12} className="classes.missioncontextcontainer">               
-              <h2>Topics</h2>
+              <h2>Links</h2>
           </Grid>
           <Grid item xs={12}  className="classes.missioncontextcontainer">
               <a href = "https://www.nasa.gov/topics/humans-in-space" target="_blank" rel="noreferrer">Humans in space</a>
           </Grid>
-          <Grid item xs={12} >
-              <ReviewContent/>
+          <Grid item xs={3} >
+              <ReviewContent image="./shuttleImage1.jpg"/>
+          </Grid>
+          <Grid item xs={3} >
+              <ReviewContent image="./shuttleImage2.jpg"/>
+          </Grid>
+          <Grid item xs={3} >
+              <ReviewContent image="./Apollo1.jpg"/>
+          </Grid>
+          <Grid item xs={3} >
+              <ReviewContent image="./Apollo2.jpg"/>
           </Grid>
 
-          </Grid>
+        </Grid>
       </div>
       );
 };

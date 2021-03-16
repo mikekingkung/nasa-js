@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "latest",
     "@material-ui/icons": "latest",
+    "@material-ui/pickers": "^3.3.10",
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",

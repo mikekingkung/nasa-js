@@ -16,11 +16,11 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import shuttleImage from  '../images/shuttleImage.jpg';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import DeleteIcon from '@material-ui/icons/Delete';
-
-
+import apolloImage from  '../images/Apollo1.jpg';
+import apolloImage2 from  '../images/Apollo2.jpg';
+import shuttleImage2 from  '../images/shuttleImage2.jpg';
 function HomeIcon(props) {
   return (
     <SvgIcon {...props}>
@@ -55,13 +55,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ReviewContent = () => {
+const ReviewContent = ({image}) => {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
+  console.log("image", image);
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
+
+
 
   return (
     <Card className={classes.root} >
@@ -80,10 +83,17 @@ const ReviewContent = () => {
         subheader="September 14, 2016"
       />
       <CardMedia
+        style={{ height: 90 }}
         className={classes.media}
-        image={shuttleImage}
-        title="Paella dish"
-      />
+        image={apolloImage}
+        title="Paella dish">
+      </CardMedia>  
+
+      <CardMedia className={classes.media} title="Paella dish">
+        <img data-testid="imageImg" src={shuttleImage2} alt="image" />
+      </CardMedia>
+
+
       <CardContent>
         <Typography variant="body2" color="primary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook together with your

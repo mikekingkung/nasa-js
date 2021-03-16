@@ -4,7 +4,6 @@ import SearchUsersBar from './SearchUsersBar';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import UserLinks from './UserLinks';
-import { ContactSupport } from "@material-ui/icons";
 
 const UserDetails = () => {
 
@@ -41,15 +40,14 @@ const UserDetails = () => {
           }
         })
             .then(response => {
-                const { data } = response;
                 setUserName("Guest");
-                setTitle(data.title);
-                setFirstName(data.firstName);
-                setLastName(data.lastName);
-                setEmailAddress(data.emailAddress);
-                setPhoneNumber(data.phoneNumber);
-                setDob(data.dob);
-                setGender(data.gender);
+                setTitle(response.data.title);
+                setFirstName(response.data.firstName);
+                setLastName(response.data.lastName);
+                setEmailAddress(response.data.emailAddress);
+                setPhoneNumber(response.data.phoneNumber);
+                setDob(response.data.dob);
+                setGender(response.data.gender);
                 setUserDetailsLoaded(true);
             }).catch(err => console.error("error getting user details", err));
       axios.get(`${userLinksUrl}/${userLinksSearch}`,
@@ -69,28 +67,7 @@ const UserDetails = () => {
             }).catch(err => console.error("error getting userlinks", err));
       }, [userSearchText]); 
 
-      
-    //   const handleUserSearch = event => {
-    //     event.preventDefault();
-
-    //     console.log("key pressed:" , event.key)
-    //     console.log(event.target.value);
-    //     if (event.key === 'Enter'){
-    //         console.log("setting search user text");
-    //         setUserSearchText(event.target.value);
-    //         setUserDetailsLoaded(false);
-    //         setUserLinksIsLoaded(false);
-    //     }
-    // }
-
     console.log("userlinks before render", userLinks);
-
-    // <div>
-    // <SearchUsersBar
-    //   searchUserText={userSearchText}
-    //   handleUserSearch={handleUserSearch}
-    // />
-
 
     return (
           <div>
@@ -98,14 +75,30 @@ const UserDetails = () => {
             <Grid container spacing={6} >
                <Grid item xs={6} >
                 <Typography/>
-                <p>UserName:{userName}</p>
-                <p>Title:{title}</p>
-                <p>FirstName:{firstName}</p>               
-                <p>LastName:{lastName}</p>
-                <p>Email:{emailAddress}</p>
-                <p>PhoneNumber:{phoneNumber}</p>
-                <p>DOB:{dob}</p>
-                <p>Gender:{gender}</p>
+                <div data-testid = "userName">
+                  <p>  UserName:{userName}</p>
+                </div>
+                <div data-testid = "title" >
+                  <p> Title:{title}</p>
+                </div>
+                <div data-testid = "firstName">
+                  <p>  FirstName:{firstName}</p>               
+                </div>
+                <div data-testid = "lastName">
+                  <p>  LastName:{lastName}</p>
+                </div>
+                <div data-testid = "emailAddress">
+                  <p>  Email:{emailAddress}</p>
+                </div>
+                <div data-testid =  "phoneNumber">
+                  <p>  PhoneNumber:{phoneNumber}</p>
+                </div>
+                <div data-testid = "dob">
+                  <p>  DOB:{dob}</p>
+                </div>                
+                <div data-testid = "gender"> 
+                  <p> Gender:{gender}</p>
+                </div>
                 <Typography/>
                </Grid>
             </Grid>

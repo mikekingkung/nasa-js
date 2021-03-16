@@ -1,0 +1,626 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUpContent Page component Correctly renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="row m-5"
+        id="signUpContent"
+      >
+        <div
+          class="col"
+          id="signUpText"
+        >
+          <p>
+            Please use this page to sign up. Once signed in you will be able to save your own links, and view them on the user details page. Currently you are restricted to Guest login only.
+          </p>
+        </div>
+        <div
+          class="col"
+        >
+          <form
+            id="signUpForm"
+          >
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="username"
+              >
+                Username
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="userName"
+                  placeholder="Username"
+                  value="Guest"
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="password"
+              >
+                Password
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="confirmPassword"
+              >
+                Confirm
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="confirmPassword"
+                  placeholder="Confirm Password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="titleSelect"
+              >
+                Title
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <select
+                  class="form-control"
+                  id="titleSelect"
+                >
+                  <option
+                    disabled=""
+                    selected=""
+                    value=""
+                  >
+                    Select an option
+                  </option>
+                  <option
+                    value="Mr"
+                  >
+                    Mr
+                  </option>
+                  <option
+                    value="Mrs"
+                  >
+                    Mrs
+                  </option>
+                  <option
+                    value="Miss"
+                  >
+                    Miss
+                  </option>
+                  <option
+                    value="Ms"
+                  >
+                    Ms
+                  </option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="name"
+              >
+                Name
+              </label>
+              <div
+                class="col-lg-5 col-md-5"
+              >
+                <input
+                  class="form-control"
+                  placeholder="First Name"
+                  value=""
+                />
+              </div>
+              <div
+                class="col-lg-5 col-md-5 stacked-control"
+              >
+                <input
+                  class="form-control"
+                  placeholder="Surname"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="emailAddress"
+              >
+                Email
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="emailAddress"
+                  placeholder="yourname@yourdomain.com"
+                  required=""
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="phoneNo"
+              >
+                Phone
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="phoneNo"
+                  placeholder="01234567890"
+                  type="tel"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-md-2 col-form-label"
+                for="dob"
+              >
+                DoB
+              </label>
+              <div
+                class="col-md-10"
+              >
+                <input
+                  class="form-control"
+                  id="dob"
+                  placeholder="DD/MM/YYYY"
+                  type="date"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="form-group form-row"
+            >
+              <label
+                class="col-lg-2 col-form-label"
+                for="gender"
+              >
+                Gender
+              </label>
+              <div
+                class="form-row col-lg-6"
+              >
+                <div
+                  class="form-check form-check-inline custom-control custom-radio custom-control-inline"
+                >
+                  <input
+                    class="custom-control-input"
+                    id="femaleRadio"
+                    name="gender"
+                    type="radio"
+                    value="female"
+                  />
+                  <span
+                    class="checkmark"
+                  />
+                  <label
+                    class="custom-control-label ccc"
+                    for="femaleRadio"
+                  >
+                    Female
+                  </label>
+                </div>
+                <div
+                  class="form-check form-check-inline custom-control custom-radio custom-control-inline"
+                >
+                  <input
+                    class="custom-control-input"
+                    id="maleRadio"
+                    name="gender"
+                    type="radio"
+                    value="male"
+                  />
+                  <label
+                    class="custom-control-label ccc"
+                    for="maleRadio"
+                  >
+                    Male
+                  </label>
+                </div>
+              </div>
+              <div
+                class="col-lg-4"
+                style="text-align: right;"
+              >
+                <input
+                  id="btn-sign-up"
+                  type="submit"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="row m-5"
+      id="signUpContent"
+    >
+      <div
+        class="col"
+        id="signUpText"
+      >
+        <p>
+          Please use this page to sign up. Once signed in you will be able to save your own links, and view them on the user details page. Currently you are restricted to Guest login only.
+        </p>
+      </div>
+      <div
+        class="col"
+      >
+        <form
+          id="signUpForm"
+        >
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="username"
+            >
+              Username
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="userName"
+                placeholder="Username"
+                value="Guest"
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="password"
+            >
+              Password
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="password"
+                placeholder="Password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="confirmPassword"
+            >
+              Confirm
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="titleSelect"
+            >
+              Title
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <select
+                class="form-control"
+                id="titleSelect"
+              >
+                <option
+                  disabled=""
+                  selected=""
+                  value=""
+                >
+                  Select an option
+                </option>
+                <option
+                  value="Mr"
+                >
+                  Mr
+                </option>
+                <option
+                  value="Mrs"
+                >
+                  Mrs
+                </option>
+                <option
+                  value="Miss"
+                >
+                  Miss
+                </option>
+                <option
+                  value="Ms"
+                >
+                  Ms
+                </option>
+              </select>
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="name"
+            >
+              Name
+            </label>
+            <div
+              class="col-lg-5 col-md-5"
+            >
+              <input
+                class="form-control"
+                placeholder="First Name"
+                value=""
+              />
+            </div>
+            <div
+              class="col-lg-5 col-md-5 stacked-control"
+            >
+              <input
+                class="form-control"
+                placeholder="Surname"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="emailAddress"
+            >
+              Email
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="emailAddress"
+                placeholder="yourname@yourdomain.com"
+                required=""
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="phoneNo"
+            >
+              Phone
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="phoneNo"
+                placeholder="01234567890"
+                type="tel"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-md-2 col-form-label"
+              for="dob"
+            >
+              DoB
+            </label>
+            <div
+              class="col-md-10"
+            >
+              <input
+                class="form-control"
+                id="dob"
+                placeholder="DD/MM/YYYY"
+                type="date"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class="form-group form-row"
+          >
+            <label
+              class="col-lg-2 col-form-label"
+              for="gender"
+            >
+              Gender
+            </label>
+            <div
+              class="form-row col-lg-6"
+            >
+              <div
+                class="form-check form-check-inline custom-control custom-radio custom-control-inline"
+              >
+                <input
+                  class="custom-control-input"
+                  id="femaleRadio"
+                  name="gender"
+                  type="radio"
+                  value="female"
+                />
+                <span
+                  class="checkmark"
+                />
+                <label
+                  class="custom-control-label ccc"
+                  for="femaleRadio"
+                >
+                  Female
+                </label>
+              </div>
+              <div
+                class="form-check form-check-inline custom-control custom-radio custom-control-inline"
+              >
+                <input
+                  class="custom-control-input"
+                  id="maleRadio"
+                  name="gender"
+                  type="radio"
+                  value="male"
+                />
+                <label
+                  class="custom-control-label ccc"
+                  for="maleRadio"
+                >
+                  Male
+                </label>
+              </div>
+            </div>
+            <div
+              class="col-lg-4"
+              style="text-align: right;"
+            >
+              <input
+                id="btn-sign-up"
+                type="submit"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

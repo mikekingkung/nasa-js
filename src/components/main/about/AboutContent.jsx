@@ -2,6 +2,7 @@ import React from 'react';
 import aboutcontentimage from '../../../images/aboutcontentimage.png';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { content } from '../../../data/content.json';
 
 
 
@@ -33,7 +34,7 @@ const AboutContent = () => {
         <div>
         <Grid container className="classes.container">
           <Grid item xs={12} className="classes.missioncontextcontainer">               
-             <p>This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright</p>
+             <p>{content.about}</p>
           </Grid>
         </Grid>
         <img

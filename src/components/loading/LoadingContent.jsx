@@ -3,6 +3,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
+
 const LoadingContent = () => {
 
     const useStyles = makeStyles((theme) => ({
@@ -16,11 +17,12 @@ const LoadingContent = () => {
 
     return (
         <div>
-        <img
-            className="img-fluid"
-            src={loadingImage}
-            alt="Learn Space Ltd"
-        />
+
+          <img
+              className="img-fluid"
+              src={loadingImage}
+              alt="Learn Space Ltd"
+          />
         <div>
             <LinearProgress />
             <LinearProgress color="secondary" />

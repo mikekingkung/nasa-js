@@ -13,7 +13,7 @@ Object {
             class="MuiGrid-root classes.missioncontextcontainer MuiGrid-item MuiGrid-grid-xs-12"
           >
             <p>
-              This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright
+              This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright.
             </p>
           </div>
         </div>
@@ -34,7 +34,7 @@ Object {
           class="MuiGrid-root classes.missioncontextcontainer MuiGrid-item MuiGrid-grid-xs-12"
         >
           <p>
-            This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright
+            This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright.
           </p>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import landingPageImage from  '../../images/landingPageImage.jpg';
-
+import { content } from '../../data/content.json';
 const LandingPage = () => {
     return (
         <div>
-            <p> Welcome </p>
+          <p data-testid="welcome">{content.welcome}</p>
             <img
                 className="img-fluid"
                 src={landingPageImage}

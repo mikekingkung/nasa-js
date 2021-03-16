@@ -15,6 +15,7 @@ const NavBarLinks = () => {
             <li className="nav-item"><NavLink to="/secured" activeClassName="active" className="nav-link">Secured</NavLink></li>
             <li className="nav-item"><NavLink to="/signup" activeClassName="active" className="nav-link">Sign Up</NavLink></li>
             <li className="nav-item"><NavLink to="/userdetails" activeClassName="active" className="nav-link">User Details</NavLink></li>
+            <li className="nav-item"><NavLink to="/form" activeClassName="active" className="nav-link">Form</NavLink></li>            
         </ul>
     );
 };

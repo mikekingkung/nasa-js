@@ -54,18 +54,11 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPre
       }
   }));
 
-    
+
   const classes = useStyles();
-
-  useEffect(() => {
-
-  }, [images]);
- 
-  console.log("images>>>", images);
-  console.log("searchText", searchText);
-
   return (
           <div>
+            <p>Search Results:</p>
             <Grid container className="classes.container">
             {Array.isArray(images) && images.length > 0 ? (
                 images.map((data, index) => (
@@ -75,16 +68,16 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPre
                         <Box style={{ border: "1px solid blue", margin: "10px"}} textAlign="justify" m={10} fontFamily="Orbitron" fontStyle="sans-serif">
                         {data.button ?
                           (<Button style={{ border: "1px solid blue", backgroundColor: "white", color: "red"}}  key={index}>
-                            <div>Details Marked For Save</div>
+                            <div data-testid="markedForSave" >Details Marked For Save</div>
                           </Button>)
                           :
                           (
                             (<Button style={{ border: "1px solid blue", backgroundColor: "white", color: "red"}} key={index}  onClick={(e) => handleButtonPress(e, images, index)}>
-                            <div>Save Details </div>
+                            <div data-testid="saveDetails">Save Details </div>
                           </Button>)  
                           )}
-                        {data.image ? <p style={{ padding: 20 }}> {data.image.title} </p> : <div/> }
-                        {data.video ? <p style={{ padding: 20 }}>{data.video.title} </p> : <div/> } 
+                        {data.image ? <p  data-testid="imageTitle" style={{ padding: 20 }}> {data.image.title} </p> : <div/> }
+                        {data.video ? <p  data-testid="videoTitle" style={{ padding: 20 }}>{data.video.title} </p> : <div/> } 
                         <br/> 
                       </Box>
                       </Typography>    
@@ -93,15 +86,15 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPre
                       <Grid item xs={6} className="classes.missioncontextcontainer">
                       <Typography component="div">
                         <Box style={{ border: "1px solid blue", margin: "10px"}} width="100%" textAlign="left" m={10}  fontFamily="Orbitron" fontStyle="sans-serif">
-                       {data.image ? <p style={{ padding: 20 }}>{data.image.description}</p> :<div/> }
-                       {data.video ? <p style={{ padding: 20 }}>{data.video.description}</p> : <div/> }
+                       {data.image ? <p data-testid="imageDescription" style={{ padding: 20 }}>{data.image.description}</p> :<div/> }
+                       {data.video ? <p data-testid="videoDescription" style={{ padding: 20 }}>{data.video.description}</p> : <div/> }
                        </Box> 
                        </Typography>                     
                     </Grid>
                     <Grid item xs={6} className="classes.missioncontextcontainer">
                         <Box style={{ border: "1px solid blue", margin: "10px"}} width="100%" alignItems="center" textAlign="center" m={10}  fontFamily="Orbitron" fontStyle="sans-serif">
-                      {data.image ? <img src={data.image.url} alt="image" width="400" height="400" minwidth="400" key={data.image.id}></img> : <p/> }
-                      {data.video ? <video src={data.video.url} width="400" height="400" minwidth="400" controls> key={data.video.id} </video> : <br/> }
+                      {data.image ? <img data-testid="imageImg" src={data.image.url} alt="image" width="400" height="400" minwidth="400" key={data.image.id}></img> : <p/> }
+                      {data.video ? <video data-testid="videoVideo" src={data.video.url} width="400" height="400" minwidth="400" controls> key={data.video.id} </video> : <br/> }
                       </Box> 
                     </Grid>
                   </Grid>
@@ -109,14 +102,14 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPre
                 ))
               ): (
                   <Grid container item xs={6}>
-                    <h1>No Search Results Found </h1>
+                    <h1>No Search Results Found</h1>
                   </Grid>
                 )
-              };
+              }
             </Grid>
-            </div>
+          </div>
   )
-    };
+};
 
 export default DisplayImages;
 

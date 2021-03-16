@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor, cleanup, screen, findByTestId } from '@testing-library/react';
+import { render, act, waitFor, cleanup, screen, findByTestId } from '@testing-library/react';
 import mockedAxios from 'axios'
 import UserLinks from '../../../../components/main/users/UserLinks';
 
@@ -19,7 +19,9 @@ describe ('test UserDetails renders correctly', () => {
       },
     ]
 
-    const { getByText } = render(<UserLinks links={linkData} />);
+    act(() => {
+      render(<UserLinks links={linkData} />);
+    });
     expect(await screen.findByTestId('linksId'));
     expect(await screen.findByTestId('linksTitle'));
     expect(await screen.findByTestId('linksUrl'));
@@ -27,8 +29,10 @@ describe ('test UserDetails renders correctly', () => {
 
   it('test user links no links present', async () => {
     const linkData = [];
-    const { getByText } = render(<UserLinks links={linkData} />);
-     expect(screen.getByText('no search links')).toBeVisible()
+    act(() => {
+       render(<UserLinks links={linkData} />);
+    });
+    expect(await screen.getByText('no search links')).toBeVisible()
   });
 
 });     

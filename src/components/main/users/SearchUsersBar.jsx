@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SearchUsersBar = ({ searchUserText, handleUserSearch }) => {
-    console.log("In SearchUsersBar");
-    console.log("searchUserText", searchUserText);
 
     return (
         <div>
