@@ -66,29 +66,9 @@ Object {
                   >
                     <a
                       class="nav-link"
-                      href="/about"
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
                       href="/secured"
                     >
                       Secured
-                    </a>
-                  </li>
-                  <li
-                    class="nav-item"
-                  >
-                    <a
-                      class="nav-link"
-                      href="/signup"
-                    >
-                      Sign Up
                     </a>
                   </li>
                   <li
@@ -106,9 +86,19 @@ Object {
                   >
                     <a
                       class="nav-link"
-                      href="/form"
+                      href="/signup"
                     >
-                      Form
+                      Sign Up
+                    </a>
+                  </li>
+                  <li
+                    class="nav-item"
+                  >
+                    <a
+                      class="nav-link"
+                      href="/about"
+                    >
+                      About
                     </a>
                   </li>
                 </ul>
@@ -129,7 +119,7 @@ Object {
           <p
             data-testid="welcome"
           >
-            Welcome to the Learn Space application. The application makes use fof the Nasa Video and Image API. The application allows keyword searches. Results are limited ae 10 currently per search. It is also possible to save links and review them on the user details page.
+            Welcome to the Learn Space application. The application makes use of the NASA Video and Image API. The application allows keyword searches. Results are limited to 10 currently per search. It is also possible to save links and review them on the user details page.
           </p>
           <img
             alt="Learn Space Ltd"
@@ -208,29 +198,9 @@ Object {
                 >
                   <a
                     class="nav-link"
-                    href="/about"
-                  >
-                    About
-                  </a>
-                </li>
-                <li
-                  class="nav-item"
-                >
-                  <a
-                    class="nav-link"
                     href="/secured"
                   >
                     Secured
-                  </a>
-                </li>
-                <li
-                  class="nav-item"
-                >
-                  <a
-                    class="nav-link"
-                    href="/signup"
-                  >
-                    Sign Up
                   </a>
                 </li>
                 <li
@@ -248,9 +218,19 @@ Object {
                 >
                   <a
                     class="nav-link"
-                    href="/form"
+                    href="/signup"
                   >
-                    Form
+                    Sign Up
+                  </a>
+                </li>
+                <li
+                  class="nav-item"
+                >
+                  <a
+                    class="nav-link"
+                    href="/about"
+                  >
+                    About
                   </a>
                 </li>
               </ul>
@@ -271,7 +251,7 @@ Object {
         <p
           data-testid="welcome"
         >
-          Welcome to the Learn Space application. The application makes use fof the Nasa Video and Image API. The application allows keyword searches. Results are limited ae 10 currently per search. It is also possible to save links and review them on the user details page.
+          Welcome to the Learn Space application. The application makes use of the NASA Video and Image API. The application allows keyword searches. Results are limited to 10 currently per search. It is also possible to save links and review them on the user details page.
         </p>
         <img
           alt="Learn Space Ltd"

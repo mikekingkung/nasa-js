@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitFor, cleanup, screen, findByTestId } from '@testing-library/react';
+import { render, waitFor, screen } from '@testing-library/react';
 import mockedAxios from 'axios'
 import FilterableImages from '../components/FilterableImages';
 
@@ -22,7 +22,6 @@ describe ('test SearchBar renders correctly', () => {
         mockedAxios.get.mockResolvedValueOnce(data);
         const { getByText } = render(<FilterableImages query={query} />);
         const resolvedSearchBar = await screen.findByTestId('searchBar');
-        console.log("resolve", resolvedSearchBar);
     });
 });        
 
@@ -54,21 +53,6 @@ describe ('test axios request for data', () => {
         expect(mockedAxios.get).toHaveBeenCalledTimes(1);
         expect(mockedAxios.get).toHaveBeenCalledWith(
             `${url}/Pluto`,  {"headers": {"Access-Control-Allow-Credentials": "*", "Content-Type": "application/json"}});
-        //expect(getByText(/...Loading/i).textContent).toBe("...Loading")
-
-
-        //const resolvedDisplayedImages = await waitForElement(() => getByTestId("displayImages"));
-    
-        //const resolvedSearchBar = screen.getByTestId('searchBar');
-        //const resolvedDisplayedImages = screen.getByTestId('DisplayImages');
-  
-        //expect((resolvedSearchBar).textContent).toBe(truthy);   
-        //expect((resolvedDisplayedImages).textContent).toBe(truthy); 
-
-        // wait for appearance inside an assertion
-        // await waitFor(() => {
-        //     expect(getByText('the lion king')).toBeInTheDocument()
-        // }
     });
 });
 

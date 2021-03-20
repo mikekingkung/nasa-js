@@ -59,17 +59,12 @@ const UserDetails = () => {
         })
             .then(response => {
                 const { data } = response;
-                console.log("response from getUserLinks>>>>>>", response);
-                console.log("data>>>>>>", data);               
                 setUserLinks(data);
-                console.log('userlinks>>>>>', userLinks);
                 setUserLinksIsLoaded(true);
             }).catch(err => console.error("error getting userlinks", err));
       }, [userSearchText]); 
 
-    console.log("userlinks before render", userLinks);
-
-    return (
+      return (
           <div>
           {userDetailsLoaded ?
             <Grid container spacing={6} >

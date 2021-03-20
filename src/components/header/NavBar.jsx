@@ -1,4 +1,3 @@
-//import BurgerBtn from "./BurgerBtn";
 import NavBarLinks from "./NavBarLinks";
 import logo from '../../images/space.jpg';
 import {Link} from 'react-router-dom';
@@ -18,7 +17,5 @@ const NavBar = () => {
         </nav>
     );
 };
-
-//<BurgerBtn />
 
 export default NavBar;

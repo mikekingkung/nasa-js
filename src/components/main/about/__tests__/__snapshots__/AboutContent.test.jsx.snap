@@ -13,7 +13,22 @@ Object {
             class="MuiGrid-root classes.missioncontextcontainer MuiGrid-item MuiGrid-grid-xs-12"
           >
             <p>
-              This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright.
+              This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright. Users are signed in as Guest and can update the guest log in details
+            </p>
+            <p>
+              The discover page, has a default search option when it loads. Users can update the search term and search NASA image and video archives. At the moment for performance the first 10 hits are displayed. It is possible to 'save details'. The url and title will then be available on the user details page for future reference / export.
+            </p>
+            <p>
+              The topics page provides various links by subject area of interest to NASA resources on the NASA home page.
+            </p>
+            <p>
+              The links page provides 4 different cards of interest. This will be expanded on later in the next phase of the project.
+            </p>
+            <p>
+              The secured page is only visible if keycloak is running and the user has logged in with the correct credentials. The username/password and authentication have yet to be intergrated, hence we we just make use of a default guest log in. This will be integrated in a future phase.
+            </p>
+            <p>
+              The user details page, displays the current Guest user details, along with any links that that have been selected from the Discover page during searching.
             </p>
           </div>
         </div>
@@ -34,7 +49,22 @@ Object {
           class="MuiGrid-root classes.missioncontextcontainer MuiGrid-item MuiGrid-grid-xs-12"
         >
           <p>
-            This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright.
+            This application makes use of the NASA Open API for images. Content is allowed to be displayed under Nasa Copyright. Users are signed in as Guest and can update the guest log in details
+          </p>
+          <p>
+            The discover page, has a default search option when it loads. Users can update the search term and search NASA image and video archives. At the moment for performance the first 10 hits are displayed. It is possible to 'save details'. The url and title will then be available on the user details page for future reference / export.
+          </p>
+          <p>
+            The topics page provides various links by subject area of interest to NASA resources on the NASA home page.
+          </p>
+          <p>
+            The links page provides 4 different cards of interest. This will be expanded on later in the next phase of the project.
+          </p>
+          <p>
+            The secured page is only visible if keycloak is running and the user has logged in with the correct credentials. The username/password and authentication have yet to be intergrated, hence we we just make use of a default guest log in. This will be integrated in a future phase.
+          </p>
+          <p>
+            The user details page, displays the current Guest user details, along with any links that that have been selected from the Discover page during searching.
           </p>
         </div>
       </div>

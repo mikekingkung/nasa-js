@@ -1,6 +1,6 @@
 import React from 'react';
 import { render} from '@testing-library/react';
-import SignUpContent from '../SignUpContent';
+import SignUp from '../SignUp';
 
 
 jest.mock('react-router-dom', () => ({
@@ -10,9 +10,9 @@ jest.mock('react-router-dom', () => ({
     })
   }));
 
-describe('SignUpContent Page component', () => {
+describe('SignUp Page component', () => {
     it('Correctly renders' ,() => {
-        const wrapper = render(<SignUpContent/>);
+        const wrapper = render(<SignUp/>);
         expect(wrapper).toMatchSnapshot();
     });
 });

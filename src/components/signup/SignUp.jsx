@@ -3,48 +3,25 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
+
 import './users.css';
 import { content } from '../../data/content.json';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import { PATH, USERS_CONTEXT } from '../../constants/constants.json';
 //import { setUserDetails } from '../../auth/userAuth.js';
 import { useHistory } from 'react-router-dom';
 //import UserContext from '../../../UserContext';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import Button from '@material-ui/core/Button';
 import RadioGroup from '@material-ui/core/RadioGroup'
-import Select from '@material-ui/core/Select'
 import FormLabel from '@material-ui/core/FormLabel'
 import Radio from '@material-ui/core/Radio'
 import MenuItem from '@material-ui/core/MenuItem'
-import { makeStyles } from '@material-ui/core/styles';
 
-export default function Form() {
-
-  const useStyles = makeStyles((theme) => ({
-    missioncontextcontainer: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      height: "100%",
-      width: "100%",
-      flex: 1,
-      backgroundColor: "black",
-      color: "red",
-      padding: "20",
-      minwidth: "200"
-      
-     }
-    }));
-
+export default function SignUp() {
+ 
   const { push } = useHistory();
-  const classes = useStyles();
-
+  // eslint-disable-next-line
   const [userName, setUserName] = useState("Guest");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -56,24 +33,14 @@ export default function Form() {
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
 
-  let firstNameInput = "";
-
   const match = !password || !confirmPassword || (password && password === confirmPassword);
 
   const submitHandler = async e => {
     e.preventDefault();
     if (!match) return;
-    console.log("userName",userName);
-    console.log("password",password);
-    console.log("title",title);
-    console.log("firstName",firstName);
-    console.log("lastName",lastName);
-    console.log("emailAddress",emailAddress);
-    console.log("phoneNumber",phoneNumber);
-    console.log("dob",dob);
-    console.log("gender",gender);
-   
+
     try {
+      // eslint-disable-next-line
       const response = await axios.post(`${PATH}${USERS_CONTEXT}/register`, {
           userName,
           password,
@@ -117,14 +84,14 @@ export default function Form() {
         SignUp
       </Typography>
     <Grid container spacing={3}>
-      <Grid item xs={12} sm={6} direction="vertical" alignItems="stretch" >
+      <Grid item xs={12} sm={6} >
         <div id="signUpText">
                 <p>
                     {content.signup}
                 </p>
         </div>          
       </Grid>
-      <Grid item xs={12} sm={6} direction="horizontal" > 
+      <Grid item xs={12} sm={6} > 
         <div>
           <form onSubmit={submitHandler}>
             <Grid item xs={12} sm={6}  style={{maxWidth:"100%"}}>          
@@ -139,7 +106,7 @@ export default function Form() {
                   style={{ margin: 8}}
                 />
                 <Grid container>
-                  <Grid item xs={6} sm={3} alignItems="left" > 
+                  <Grid item xs={6} sm={3} > 
                     <TextField 
                       style={{ margin: 8}}
                       id="password"
@@ -149,11 +116,10 @@ export default function Form() {
                       variant="outlined"
                       value={password}
                       onInput={e => 
-                        {console.log('set password')
-                        setPassword(e.target.value)}}
+                        setPassword(e.target.value)}
                     />
                   </Grid>
-                  <Grid item xs={6} sm={3} alignItems="right" > 
+                  <Grid item xs={6} sm={3} > 
                     <TextField 
                       id="confirm-password"
                       name="confirmPassword"
@@ -172,7 +138,7 @@ export default function Form() {
                   </Grid>
                 </Grid>
 
-                <Grid item xs={12} sm={6} alignItems="right" >   
+                <Grid item xs={12} sm={6} >   
                 <TextField
                   style={{ margin: 8}}
                   variant="outlined"
@@ -241,13 +207,12 @@ export default function Form() {
                     defaultValue="DOB"
                     className="form-field"
                     onInput={e => 
-                        {console.log('set dob')
-                        setDob(e.target.value)}}
+                        setDob(e.target.value)}
                     InputLabelProps={{
                         shrink: true,
                   }}
                 />
-                <RadioGroup style={{ margin: 8}} label="Gender" name="gender" value={gender} onClick={e => setGender(e.target.value)} row="true" >
+                <RadioGroup style={{ margin: 8}} label="Gender" name="gender" value={gender} onClick={e => setGender(e.target.value)} row >
                     <FormLabel component="legend">Gender</FormLabel>
                     <FormControlLabel value="Male" control={<Radio />} label="Male"  />
                     <FormControlLabel value="Female" control={<Radio />} label="Female"  />

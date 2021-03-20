@@ -5,12 +5,8 @@ import LinksContent from './links/LinksContent';
 import AboutContent from './about/AboutContent';
 import Secured from '../secured/Secured';
 import LandingPage from '../landing/LandingPage';
-import SignUpContent from '../signup/SignUpContent';
 import FilterableImages from '../FilterableImages';
-import Form from '../signup/Form';
-import React, { useState, useEffect } from 'react';
-
-import { QUERY } from '../../constants/constants.json';
+import SignUp from '../signup/SignUp';
 
 const Main = () => {
     
@@ -32,18 +28,15 @@ const Main = () => {
                 <Route path="/secured">
                     <Secured/>
                 </Route>                
-                <Route path="/about">
-                    <AboutContent />
-                </Route>
-                <Route path="/signup">
-                    <SignUpContent />
-                </Route>
                 <Route path="/userdetails">
                     <UserDetails />
                 </Route>
-                <Route path="/form">
-                    <Form />
-                </Route>                    
+                <Route path="/signup">
+                    <SignUp />
+                </Route> 
+                <Route path="/about">
+                    <AboutContent />
+                </Route>                   
             </Switch >
         </main >
     );

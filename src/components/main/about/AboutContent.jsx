@@ -4,8 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { content } from '../../../data/content.json';
 
-
-
 const AboutContent = () => {
 
     const useStyles = makeStyles((theme) => ({
@@ -34,7 +32,13 @@ const AboutContent = () => {
         <div>
         <Grid container className="classes.container">
           <Grid item xs={12} className="classes.missioncontextcontainer">               
-             <p>{content.about}</p>
+             <p>{content.about_copyright}</p>
+             <p>{content.about_discover}</p>
+             <p>{content.about_topics}</p>
+             <p>{content.about_links}</p>
+             <p>{content.about_secured}</p>
+             <p>{content.about_user_details}</p>
+
           </Grid>
         </Grid>
         <img
