@@ -3,16 +3,24 @@ import DisplayImages from './DisplayImages';
 import SearchBar from './search/SearchBar';
 import axios from "axios";
 import LoadingContent from  './loading/LoadingContent';
+import SearchCounter from '../SearchCounter';
+import useMyContext from '../useMyContext'
 
 import { PATH, USERS_CONTEXT } from '../constants/constants.json';
-
+import { SystemUpdate } from '@material-ui/icons';
 
 const FilterableImages = ({query}) => {
+
+    const user = useMyContext();
+
+    const INITIAL_PROCESSING_LIMIT = 10;
 
     const imagesUrl = `http://localhost:8080/getimages`;
 
     const [searchText, setSearchText] = useState(query);
+    const [processingLimit, setProcessingLimit] = useState(INITIAL_PROCESSING_LIMIT);
     const [advanced, setAdvanced] = useState(false);
+
 
     const [images, setImages] = useState(query);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -24,7 +32,7 @@ const FilterableImages = ({query}) => {
     const [isSaved, setIsSaved] = useState(false);
 
   useEffect(() => {
-    axios.get(`${imagesUrl}/${searchText}`,
+    axios.get(`${imagesUrl}/${searchText}/${processingLimit}`,
     {
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +62,7 @@ const FilterableImages = ({query}) => {
       }
   }, [userLinks]); 
     
-  const handleChange = event => {
+  const handleChange = (event) => {
     //event.preventDefault();
     if (event.key === 'Enter'){
       setSearchText(event.target.value);
@@ -66,7 +74,12 @@ const FilterableImages = ({query}) => {
     }
   }
 
-  const userName = 'Guest';
+  const handleChangeSearchLimit = (searchLimit) => {
+    setProcessingLimit(searchLimit);
+  }
+  
+
+  const userName = user;
 
   const handleButtonPress = (event, data, markedIndex) => {
     const links = {'userName': userName,
@@ -79,6 +92,7 @@ const FilterableImages = ({query}) => {
     
   return (
     <div data-testid="searchBar" >
+        <SearchCounter handleChangeSearchLimit={handleChangeSearchLimit}/>
         <SearchBar
             searchText={searchText}
             advanced={advanced}

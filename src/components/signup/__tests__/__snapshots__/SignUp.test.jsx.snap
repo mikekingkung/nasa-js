@@ -42,8 +42,8 @@ Object {
                       style="margin: 8px;"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-                        data-shrink="true"
+                        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                        data-shrink="false"
                         for="username"
                         id="username-label"
                       >
@@ -58,14 +58,14 @@ Object {
                           id="username"
                           name="username"
                           type="input"
-                          value="Guest"
+                          value=""
                         />
                         <fieldset
                           aria-hidden="true"
                           class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
                         >
                           <legend
-                            class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                            class="PrivateNotchedOutline-legendLabelled-3"
                           >
                             <span>
                               Username
@@ -621,8 +621,8 @@ Object {
                     style="margin: 8px;"
                   >
                     <label
-                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
-                      data-shrink="true"
+                      class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
+                      data-shrink="false"
                       for="username"
                       id="username-label"
                     >
@@ -637,14 +637,14 @@ Object {
                         id="username"
                         name="username"
                         type="input"
-                        value="Guest"
+                        value=""
                       />
                       <fieldset
                         aria-hidden="true"
                         class="PrivateNotchedOutline-root-1 MuiOutlinedInput-notchedOutline"
                       >
                         <legend
-                          class="PrivateNotchedOutline-legendLabelled-3 PrivateNotchedOutline-legendNotched-4"
+                          class="PrivateNotchedOutline-legendLabelled-3"
                         >
                           <span>
                             Username

@@ -48,11 +48,11 @@ describe ('test axios request for data', () => {
         });
 
 
-        expect((resolvedSearchBar).textContent).toBe('Search:Search Results:No Search Results Found'); 
+        expect((resolvedSearchBar).textContent).toBe('Search Results Limit: 10   +1 -1 resetSearch:Search Results:No Search Results Found'); 
 
         expect(mockedAxios.get).toHaveBeenCalledTimes(1);
         expect(mockedAxios.get).toHaveBeenCalledWith(
-            `${url}/Pluto`,  {"headers": {"Access-Control-Allow-Credentials": "*", "Content-Type": "application/json"}});
+            `${url}/Pluto/10`,  {"headers": {"Access-Control-Allow-Credentials": "*", "Content-Type": "application/json"}});
     });
 });
 

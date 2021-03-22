@@ -17,12 +17,15 @@ import RadioGroup from '@material-ui/core/RadioGroup'
 import FormLabel from '@material-ui/core/FormLabel'
 import Radio from '@material-ui/core/Radio'
 import MenuItem from '@material-ui/core/MenuItem'
+import useMyContext from '../../useMyContext'
 
 export default function SignUp() {
+
+  const user = useMyContext();
  
   const { push } = useHistory();
   // eslint-disable-next-line
-  const [userName, setUserName] = useState("Guest");
+  const [userName, setUserName] = useState(user);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [title, setTitle] = useState("");

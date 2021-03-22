@@ -58,7 +58,7 @@ const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPre
   const classes = useStyles();
   return (
           <div>
-            <p>Search Results:</p>
+             <p>Search Results:</p>
             <Grid container className="classes.container">
             {Array.isArray(images) && images.length > 0 ? (
                 images.map((data, index) => (

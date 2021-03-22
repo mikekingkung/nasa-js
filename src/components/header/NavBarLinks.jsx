@@ -4,6 +4,7 @@ import UserContext from '../../UserContext';
 import { useContext } from 'react';
 
 const NavBarLinks = () => {
+    //Kept userContext althoughj not used as it will be used in later stages
     const { signedIn } = useContext(UserContext);
 
     return (
@@ -21,6 +22,7 @@ const NavBarLinks = () => {
 
 export default NavBarLinks;
 
+// Kept as to be used in later stages
 // {
 //     signedIn && isAuthenticated() ?
 //         <NavLink to="/profile" activeClassName="active" className="nav-link">My<br />Account</NavLink>
