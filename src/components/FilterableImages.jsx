@@ -7,7 +7,6 @@ import SearchCounter from '../SearchCounter';
 import useMyContext from '../useMyContext'
 
 import { PATH, USERS_CONTEXT } from '../constants/constants.json';
-import { SystemUpdate } from '@material-ui/icons';
 
 const FilterableImages = ({query}) => {
 

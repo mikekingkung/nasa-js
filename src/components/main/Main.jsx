@@ -10,8 +10,11 @@ import SignUp from '../signup/SignUp';
 import { images } from '../../data/content.json';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Main = () => {
+  
+    
     
     return (
         <main className="container">
@@ -52,22 +55,41 @@ function Child() {
     // the dynamic pieces of the URL.
     let { id } = useParams();
  
+    const useStyles = makeStyles((theme) => ({
+        container: {
+          height: "100%",
+          width: '100%',
+          padding: "10px"
+         },
+         missioncontextcontainer: {
+           display: "flex",
+           flexDirection: "row",
+           justifyContent: "space-between",
+           height: "100%",
+           width: "100%",
+           flex: 1,
+           backgroundColor: "black",
+           color: "red",
+           padding: "20",
+           minwidth: "200"
+          },
+      }));
+
+    const classes = useStyles();  
     return (
         <div>
-        <h3>ID: {id}</h3>
         <Grid container className="classes.container">
         {Array.isArray(images) && images.length > 0 ? (
             images.map((data, index) => (
-                <div key ={index}>
                 <Grid item xs={12} className="classes.missioncontextcontainer">
-                    <Box  width="100%" alignItems="center" textAlign="center" m={10}  fontFamily="Orbitron" fontStyle="sans-serif">
-                        {data.imageurl && data.id == id ? <a href={data.imageurl}  target="_blank" rel="noreferrer">{data.imageurl}"</a> : <div/> }                    
-           
-                        {data.description && data.id == id ? <p> {data.description} </p> : <div/> }                    
-                        {data.imageurl && data.id == id ? <img src={data.imageurl} width="400" height="400" minwidth="400" key={data.id}></img> : <p/> }
+                    <Box  key ={index} width="100%" alignItems="left" textAlign="left" m={1}  fontFamily="Orbitron" fontStyle="sans-serif">
+                        {data.title && data.id == id ? <p>{data.title}</p> : ''}    
+                        {data.imageurl && data.id == id ? <img src={data.imageurl}  key={data.id}></img> :'' }                                        
+                        {data.credit && data.id == id ? <p>{data.credit}</p> : '' }                    
+                        {data.description && data.id == id ? <p> {data.description} </p> : '' }                    
+                        
                     </Box>
                 </Grid>
-                </div>
             ))
             ): (
                 <Grid container item xs={6}>

@@ -54,16 +54,22 @@
     ],
     "images": [
        {"id": 1,
-        "description": "astronomy picture of the day",
-        "imageurl": "https://apod.nasa.gov/apod/astropix.html"
+        "title": "Aurora Shimmer, Meteor Flash",
+        "credit": "Image Credit & Copyright: Bjørnar G. Hansen",
+        "description": "Explanation: Some night skies are serene and passive -- others shimmer and flash. The later, in the form of auroras and meteors, haunted skies over the island of Kvaløya, near Tromsø Norway on 2009 December 13. This 30 second long exposure records a shimmering auroral glow gently lighting the wintery coastal scene. A study in contrasts, the image also captures the sudden flash of a fireball meteor from the excellent Geminid meteor shower of 2009. Streaking past familiar stars in the handle of the Big Dipper, the trail points back toward the constellation Gemini, off the top of the view. Both auroras and meteors occur in Earth's upper atmosphere at altitudes of 100 kilometers or so, but aurora caused by energetic charged particles from the magnetosphere, while meteors are trails of cosmic dust. Nine years after this photograph was taken, toward the end of this week, the yearly 2018 Geminids meteor shower will peak again, although this time their flashes will compete with the din of a half-lit first-quarter moon during the first half of the night.",
+        "imageurl": "http://localhost:8080/getstaticimage/image1.jpg"
        },
        {"id": 2,
-        "description": "Central Lagoon in Infrared",
-        "imageurl": "https://apod.nasa.gov/apod/ap210319.html"
+        "title": "Moon Struck",
+        "credit": "Image Credit & Copyright: Petr Horálek",
+        "description": "Explanation: Craters produced by ancient impacts on the airless Moon have long been a familiar sight. But only since the 1990s have observers began to regularly record and study optical flashes on the lunar surface, likely explosions resulting from impacting meteoroids. Of course, the flashes are difficult to see against a bright, sunlit lunar surface. But during the January 21 total eclipse many imagers serendipitously captured a meteoroid impact flash against the dim red Moon. Found while examining images taken shortly before the total eclipse phase began, the flash is indicated in the inset above, near the Moon's darkened western limb. Estimates based on the flash duration recorded by the Moon Impact Detection and Analysis System (MIDAS) telescopes in southern Spain indicate the impactor's mass was about 10 kilograms and created a crater between seven and ten meters in diameter.",
+        "imageurl": "http://localhost:8080/getstaticimage/image2.jpg"
        },
        {"id": 3,
-        "description": "Spiral Galaxy NGC 1350",
-        "imageurl": "https://apod.nasa.gov/apod/ap210212.html"
+        "title": "NGC 2442: Galaxy in Volans",
+        "credit":"Image Credit & Copyright: Processing: Robert Gendler & Roberto Colombari. Data: Hubble Legacy Archive, European Southern Observatory",
+        "description": "Explanation: Distorted galaxy NGC 2442 can be found in the southern constellation of the flying fish, (Piscis) Volans. Located about 50 million light-years away, the galaxy's two spiral arms extending from a pronounced central bar have a hook-like appearance in wide-field images. But this mosaicked close-up, constructed from Hubble Space Telescope and European Southern Observatory data, follows the galaxy's structure in amazing detail. Obscuring dust lanes, young blue star clusters and reddish star forming regions surround a core of yellowish light from an older population of stars. The sharp image data also reveal more distant background galaxies seen right through NGC 2442's star clusters and nebulae. The image spans about 75,000 light-years at the estimated distance of NGC 2442.",
+        "imageurl": "http://localhost:8080/getstaticimage/image3.jpg"
        }
     ]
 }
