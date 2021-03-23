@@ -11,7 +11,7 @@
         "about_user_details": "The user details page, displays the current Guest user details, along with any links that that have been selected from the Discover page during searching."
     },
     "cardcontent": [
-        {"id": "card1",
+        {"id": "1",
          "title": "Robonaut 2",
          "subheader": "March 19, 2021",
          "content1": "A Robonaut is a dexterous humanoid robot built and designed at NASA Johnson Space Center in Houston, Texas. Our challenge is to build machines that can help humans work and explore in space. Working side by side with humans, or going where the risks are too great for people.",
@@ -21,7 +21,7 @@
          "content5":  "Another way this might be beneficial is during a robotic precursor mission. R2 would bring one set of tools for the precursor mission, such as setup and geologic investigation. Not only does this improve efficiency in the types of tools, but also removes the need for specialized robotic connectors. Future missions could then supply a new set of tools and use the existing tools already on location.",
          "image": "http://localhost:8080/getstaticimage/robonaut2.jpg"
         },
-        {"id": "card2",
+        {"id": "2",
          "title": "Mars Helicopter",
          "subheader": "March 19, 2021",            
          "content1": "The helicopter, which weighs about 4 pounds (1.8 kilograms) on Earth and has a fuselage about the size of a tissue box, started out six years ago as an implausible prospect. Engineers at NASA’s Jet Propulsion Laboratory in Southern California knew it was theoretically possible to fly in Mars’ thin atmosphere, but no one was sure whether they could build a vehicle powerful enough to fly, communicate, and survive autonomously with the extreme restrictions on its mass.",
@@ -31,7 +31,7 @@
          "content5":  "The Mars Helicopter is what is known as a technology demonstration – a narrowly focused project that seeks to test a new capability for the first time. Previous groundbreaking technology demonstrations include the first Mars rover, Sojourner, and the Mars Cube One (MarCO) CubeSats that flew by Mars.",
          "image": "http://localhost:8080/getstaticimage/marscopter.jpg"
         },
-        {"id": "card3",
+        {"id": "3",
          "title": "Artemis",
          "subheader": "March 19, 2021",                
          "content1": "America is going back to the Moon, and NASA will use what it learns during the Artemis program to prepare for humanity's next giant leap: sending astronauts to Mars. Artemis is part of the steppingstone approach that will build on research conducted in ground analogs and on the International Space Station to help NASA identify ways to keep astronauts safe, healthy, and productive during future missions to Mars.",
@@ -41,7 +41,7 @@
          "content5": "Missions to the Moon are about 1,000 times farther from Earth and more challenging than expeditions to the space station. Artemis missions will provide a unique opportunity to evaluate the hazards astronauts will face in a true deep space environment, before embarking on the years-long journey to Mars. Lunar missions will enable researchers to address the challenges of living farther from Earth than ever before, and test new technologies and procedures needed for the approximately 140 million mile round-trip to the Red Planet.",
           "image": "http://localhost:8080/getstaticimage/artemis.jpg"
         },
-        {"id": "card4",
+        {"id": "4",
          "title": "Lucy",
          "subheader": "March 19, 2021",        
          "content1": "Seen here in late 2020 nearly fully assembled, the 13-foot tall (about 4 meters) Lucy spacecraft is lifted back to its dolly as the Lockheed Martin team in Denver, Colorado, continues production.",
@@ -51,5 +51,19 @@
          "content5": "Lucy is so cool",
          "image": "http://localhost:8080/getstaticimage/lucy.jpg"
         }
+    ],
+    "images": [
+       {"id": 1,
+        "description": "astronomy picture of the day",
+        "imageurl": "https://apod.nasa.gov/apod/astropix.html"
+       },
+       {"id": 2,
+        "description": "Central Lagoon in Infrared",
+        "imageurl": "https://apod.nasa.gov/apod/ap210319.html"
+       },
+       {"id": 3,
+        "description": "Spiral Galaxy NGC 1350",
+        "imageurl": "https://apod.nasa.gov/apod/ap210212.html"
+       }
     ]
 }
