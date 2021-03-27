@@ -6,7 +6,7 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import './DisplayImages.css'
 
-const DisplayImages = ({ images, searchText, advanced, isLoaded, handleButtonPress}) => {
+const DisplayImages = ({ images, handleButtonPress}) => {
 
   const useStyles = makeStyles((theme) => ({
     landingpage: {

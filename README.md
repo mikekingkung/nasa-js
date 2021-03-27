@@ -5,6 +5,17 @@ https://images-api.nasa.gov/search?q=moon
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## A static version of the application was built initially.
+
+It can be seen by navigating to the following URL:
+i.e pasting the following in your browser
+Accessing depends on where you clone the repository
+You will have to change the URL appropriately
+D:\Documents\react\nasa-js\src\static\index.html
+
+NB You will also have to change to URLs in the html files in the static directories
+
 ## Available Scripts
 
 In the project directory, you can run:

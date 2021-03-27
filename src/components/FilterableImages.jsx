@@ -18,9 +18,6 @@ const FilterableImages = ({query}) => {
 
     const [searchText, setSearchText] = useState(query);
     const [processingLimit, setProcessingLimit] = useState(INITIAL_PROCESSING_LIMIT);
-    const [advanced, setAdvanced] = useState(false);
-
-
     const [images, setImages] = useState(query);
     const [isLoaded, setIsLoaded] = useState(false);
     const [userLinks, setUserLinks] = useState({
@@ -94,15 +91,11 @@ const FilterableImages = ({query}) => {
         <SearchCounter handleChangeSearchLimit={handleChangeSearchLimit}/>
         <SearchBar
             searchText={searchText}
-            advanced={advanced}
             handleChange={handleChange}
         />
         {isLoaded?
               <DisplayImages data-testid="displayImages"
                 images={images}
-                searchText={searchText}
-                advanced={advanced}
-                isLoaded={isLoaded}
                 handleButtonPress={handleButtonPress}
             />
             :

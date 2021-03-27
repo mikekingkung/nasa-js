@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SearchBar = ({ searchText, advanced, handleChange }) => {
+const SearchBar = ({ searchText, handleChange }) => {
     return (
         <div>
                 <label>
@@ -15,7 +15,6 @@ const SearchBar = ({ searchText, advanced, handleChange }) => {
 
 SearchBar.propTypes = {
     searchText: PropTypes.string.isRequired,
-    advanced: PropTypes.bool.isRequired,
     handleChange: PropTypes.func.isRequired
 }
 

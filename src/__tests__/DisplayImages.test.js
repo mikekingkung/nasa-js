@@ -17,14 +17,11 @@ describe ('test displayimages renders titles, descriptions and images correctly'
 
     test('test title, description and image renders correctly', async () => {
         const searchText = "Pluto";
-        const advanced = false
+
         const isLoaded = true;
         const handleButtonPressFn = jest.fn();
 
         render(<DisplayImages images={images}
-            searchText={searchText}
-            advanced={advanced}
-            isLoaded={isLoaded}
             handleButtonPress={handleButtonPressFn} />);
 
         expect(await screen.findByTestId('imageTitle'));
@@ -45,15 +42,9 @@ describe ('test displayimages renders titles, descriptions and videos correctly'
         }
     ];
     test('test title, description and videos renders correctly', async () => {
-        const searchText = "Moon";
-        const advanced = false
-        const isLoaded = true;
         const handleButtonPressFn = jest.fn();
 
         render(<DisplayImages images={images}
-            searchText={searchText}
-            advanced={advanced}
-            isLoaded={isLoaded}
             handleButtonPress={handleButtonPressFn} />);
 
         expect(await screen.findByTestId('videoTitle'));
@@ -63,15 +54,9 @@ describe ('test displayimages renders titles, descriptions and videos correctly'
 
 
     test('test save for later button renders correctly', async () => {
-        const searchText = "Moon";
-        const advanced = false
-        const isLoaded = true;
 
         const mockfn = jest.fn()
         render(<DisplayImages images={images}
-            searchText={searchText}
-            advanced={advanced}
-            isLoaded={isLoaded}
             handleButtonPress = {mockfn} />);
 
         const button = await screen.findByTestId('saveDetails');
