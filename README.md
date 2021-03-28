@@ -14,7 +14,7 @@ Accessing depends on where you clone the repository
 You will have to change the URL appropriately
 D:\Documents\react\nasa-js\src\static\index.html
 
-NB You will also have to change to URLs in the html files in the static directories
+NB You may also have to change to URLs in the html files in the static directories, but shouldn't do, because these use relative paths.
 
 ## Available Scripts
 
